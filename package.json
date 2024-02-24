@@ -1,0 +1,38 @@
+{
+  "name": "castor-app-beta",
+  "version": "1.0.0",
+  "description": "castor chatbot with llama",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch index.js --exec electron .",
+    "build-icon": "electron-icon-builder --input=./public/castor.png --output=build --flatten",
+    "pack": "electron-builder"
+  },
+  "author": "Qin.T",
+  "license": "ISC",
+  "dependencies": {
+    "@llama-node/llama-cpp": "0.1.6",
+    "llama-node": "0.1.6"
+  },
+  "devDependencies": {
+    "electron": "29.0.1",
+    "electron-icon-builder": "2.0.1",
+    "electron-builder": "24.12.0",
+    "nodemon": "3.1.0"
+  },
+  "build": {
+    "files": [
+      "./dist/**/*",
+      "./index.html",
+      "./*.js"
+    ],
+    "appId": "castor.chatbot",
+    "productName": "castor",
+    "copyright": "copyright @ Castor Team",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist",
+      "app": "."
+    }
+  }
+}

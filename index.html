@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+
+    <title>Castor (RBC)</title>
+</head>
+
+<body>
+    <h1>Castor AI Chatbot (Beta)</h1>
+    LLAMA Path: &nbsp;&nbsp;<input id="model" type="text" size="100" />
+    <button type="button" id="modelBtn">Load LLama Model</button> <br /><br />
+
+    Prompt Text: &nbsp;&nbsp;<input id="prompt" type="text" size="100" />
+    <button type="button" id="promptBtn">Ask</button> <br /><br />
+
+    Prompt File: &nbsp;&nbsp;<input id="promptFile" type="text" size="100" />
+    <button type="button" id="promptFileBtn">Load Prompt</button> <br /><br />
+
+    <textarea id="answer" name="answer" cols="193" rows="30"></textarea>
+</body>
+<script src="./renderer.js"></script>
+
+</html>
